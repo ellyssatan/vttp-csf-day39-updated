@@ -1,0 +1,22 @@
+<h2>Post</h2>
+<h4>Author {{ post.name }}</h4>
+<h4>Date: {{ post.postDate }}</h4>
+
+<h2> {{ post.title }} </h2>
+
+<p> {{ post.text }} </p>
+
+<div>
+    <img src="{{ post.imageUrl }}" width="300">
+</div>
+
+<div>
+    <!-- <form [formGroup]="form"> -->
+        <button type="button" (click)="like()">
+                Like {{ post.like }}
+        </button>
+        <button type="submit" (click)="dislike()">
+                Dislike  {{ post.dislike }}
+        </button>
+    <!-- </form> -->
+</div>

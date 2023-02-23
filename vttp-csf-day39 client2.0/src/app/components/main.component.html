@@ -1,0 +1,22 @@
+<h1>FORM</h1>
+<form [formGroup]="form" (ngSubmit)="process()">
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" formControlName="email" size="30"></td>
+        </tr>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" formControlName="title" size="30"></td>
+        </tr>
+        <tr>
+            <td>Text:</td>
+            <td><textarea cols="30" rows="3" formControlName="text"></textarea></td>
+        </tr>
+        <tr>
+            <td>Image:</td>
+            <td><input type="file" formControlName="image" #image></td>
+        </tr>
+        <button type="submit" [disabled]="form.invalid">Post dat shit</button>
+    </table>
+</form>
